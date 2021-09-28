@@ -19,7 +19,7 @@ const Leaderboard = () => {
       //     username: "Nimish Jain",
       //     noOfSubmissions: 5,
       //     noOfStars: 10,
-      //   },
+      //   }
       // ];
       setLeaderboard(res);
       setLoadingPage(false);
@@ -39,11 +39,11 @@ const Leaderboard = () => {
       )}
       <div className="whole_page">
         <table className="tables">
-          <thead class="fixedHeader">
+          <thead className="fixedHeader">
             <tr className="heading">
               <th>Rank</th>
               <th>Player</th>
-              <th>Submissions</th>
+              <th>Sub</th>
               <th>Stars</th>
             </tr>
           </thead>
