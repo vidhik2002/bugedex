@@ -9,6 +9,7 @@ const Leaderboard = () => {
   useEffect(() => {
     const asyncLeaderboard = async () => {
       let res = await getLeaderboard();
+      console.log(res);
       // const res = [
       //   {
       //     username: "Nimish Jain Nimish JainNimish Jain",

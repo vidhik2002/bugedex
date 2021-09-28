@@ -4,6 +4,8 @@ const app = express();
 require("dotenv/config");
 require("./models/dbInit");
 
+const cors = require('cors');
+app.use(cors());
 app.set("trust proxy", true);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
