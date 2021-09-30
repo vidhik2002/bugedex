@@ -8,10 +8,7 @@ a {
 }
 
 :root {
-  --past: #dbf429;
-  --present: #fe3176;
-  --future: #15bcff;
-  --leaderboard-bg: var(--present);
+  --yellow2: #FBEB9A;
   --guide-bg: var(--future);
   --map-bg: var(--past);
   --navbar-bg: var(--map-bg);
