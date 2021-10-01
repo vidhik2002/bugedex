@@ -33,6 +33,7 @@
   width: 400px;
   margin: 1.5rem 0;
   pointer-events: none;
+  margin-right: 25px;
 }
 
 #darken {
@@ -79,48 +80,6 @@
   width: 80%;
 }
 
-.fixedHeader {
-  border-spacing: 0 1rem;
-  padding-right: 25px;
-}
-
-.heading {
-  width: 100%;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-  color: var(--yellow2);
-  font-size: 1.6rem;
-  margin: 1.2rem 0;
-  font-family: Joystix;
-  padding: 10px 0;
-}
-
-.heading th {
-  padding: 10px 5px;
-  border-bottom: 4px solid var(--yellow2);
-}
-
-.heading th:nth-child(1) {
-  width: 10vw;
-}
-
-.heading th:nth-child(2) {
-  max-width: 50vw;
-  width: 50vw;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.heading th:nth-child(3) {
-  width: 10vw;
-}
-
-.heading th:nth-child(4) {
-  width: 10vw;
-}
-
 .scrolldown {
   overflow-y: scroll;
   border-spacing: 0 1rem;
@@ -148,83 +107,135 @@
   background: transparent;
 }
 
-.names {
-  color: var(--yellow2);
-  height: 2rem;
-  font-size: 1.5rem;
-  font-family: "Ligconsolata";
-  font-weight: 700;
-  border-radius: 5%;
-  text-align: center;
-  font-weight: bolder;
-  /* background-color: black; */
+.fixedHeader {
+  padding-right: 25px;
+  padding-bottom: 20px;
 }
 
-.names td {
-  /* border-bottom: solid 3px var(--yellow2); */
-  /* border-style: solid none; */
+.heading {
+  width: 100%;
+  color: var(--yellow2);
+  font-size: 1.4rem;
+  margin: 0;
+  font-family: Joystix;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid var(--yellow2);
+}
+
+.heading div {
   padding: 10px 5px;
 }
 
-.names td:nth-child(1) {
-  width: 10vw;
-  /* border-left-style: solid;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px; */
+.names {
+  color: var(--yellow2);
+  font-size: 1.5rem;
+  font-family: "Ligconsolata";
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.names td:nth-child(2) {
-  max-width: 50vw;
-  width: 50vw;
+.names div {
+  padding: 10px 5px;
+}
+
+.table-data1 {
+  width: 10vw;
+  max-width: 10vw;
+}
+
+.table-data2 {
+  max-width: 30vw;
+  width: 30vw;
+  text-align: left;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.names td:nth-child(3) {
-  width: 10vw;
+.table-data3 {
+  width: 20vw;
+  max-width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.names td:nth-child(4) {
-  width: 10vw;
-  /* border-right-style: solid;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px; */
+.table-data3 img {
+  margin: 1px;
+}
+
+.table-data4 {
+  width: 20vw;
+  max-width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.table-data4 img {
+  margin: 1px;
 }
 
 .footer-logo {
   width: 300px;
   margin: 0.5rem 0;
   pointer-events: none;
+  margin-right: 25px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .tables {
     width: 80vw;
   }
 
   .heading {
-    font-size: 1.5rem;
-    margin: 1rem 0;
+    font-size: 1.1rem;
   }
 
   .names {
     font-size: 1.2rem;
-    height: 1.5rem;
+  }
+
+  .table-data1 {
+    width: 10vw;
+    max-width: 10vw;
+  }
+
+  .table-data2 {
+    max-width: 20vw;
+    width: 20vw;
+    text-overflow: clip;
+    overflow: scroll;
+  }
+
+  .table-data3 {
+    width: 30vw;
+    max-width: 30vw;
+  }
+
+  .table-data4 {
+    width: 20vw;
+    max-width: 20vw;
   }
 }
 
 @media screen and (max-width: 420px) {
   .leader-logo {
     width: 80%;
+    margin-right:12px;
   }
 
   .tables {
     width: 90vw;
-  }
-
-  .fixedHeader {
-    padding-right: 7px;
   }
 
   .scrolldown {
@@ -236,44 +247,23 @@
     width: 5px;
   }
 
+  .fixedHeader {
+    padding-right: 12px;
+    padding-bottom: 5px;
+  }
+
   .heading {
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin: 0.7rem 0;
-  }
-
-  .heading th:nth-child(2) {
-    max-width: 40vw;
-    width: 40vw;
-  }
-
-  .heading th:nth-child(1),
-  .heading th:nth-child(3),
-  .heading th:nth-child(4) {
-    width: 15vw;
+    border-bottom: 3px solid var(--yellow2);
   }
 
   .names {
     font-size: 1rem;
-    height: 1rem;
-    height: 2rem;
-  }
-
-  .names td {
-    padding: 5px;
-  }
-
-  .names td:nth-child(2) {
-    max-width: 40vw;
-    width: 40vw;
-  }
-
-  .names td:nth-child(1),
-  .names td:nth-child(3),
-  .names td:nth-child(4) {
-    width: 15vw;
   }
 
   .footer-logo {
     width: 70%;
+    margin-right:12px;
   }
 }

@@ -5,6 +5,7 @@ import leaderLogo from "../../assets/leaderboard.svg";
 import footer from "../../assets/Footer.svg";
 import docLogo from "../../assets/doc.svg";
 import starLogo from "../../assets/star.svg";
+import halfStarLogo from "../../assets/halfstar.svg";
 import Pikachu from "../../assets/pikachu-running.gif";
 import "./leader.css";
 
@@ -13,7 +14,7 @@ const Leaderboard = () => {
   const [loadingPage, setLoadingPage] = useState(true);
 
   function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
   useEffect(() => {
@@ -23,14 +24,14 @@ const Leaderboard = () => {
       // console.log(res);
       // const res = [
       //   {
-      //     username: "Nimish Jain Nimish JainNimish Jain",
-      //     noOfSubmissions: 5,
-      //     noOfStars: 10,
+      //     username: "Nimish Jain Nimish Jain Nimish Jain",
+      //     noOfSubmissions: 7,
+      //     noOfStars: 4.5,
       //   },
       //   {
       //     username: "Nimish Jain",
       //     noOfSubmissions: 5,
-      //     noOfStars: 10,
+      //     noOfStars: 2.1,
       //   },
       // ];
       setLeaderboard(res);
@@ -42,7 +43,7 @@ const Leaderboard = () => {
   return (
     <>
       {loadingPage && (
-        <div>
+        <div className="table-data">
           <div id="map-loading">
             {/* <CircularProgress color="success" /> */}
             <img src={Pikachu} alt="" className="pikachu" />
@@ -56,24 +57,46 @@ const Leaderboard = () => {
           <table className="tables">
             <thead className="fixedHeader">
               <tr className="heading">
-                <th>#</th>
-                <th>Player</th>
-                <th>
-                  <img src={docLogo} alt="" />
-                </th>
-                <th>
-                  <img src={starLogo} alt="" />
-                </th>
+                <div className="table-data1">#</div>
+                <div className="table-data2">Player</div>
+                <div className="table-data3">
+                  {/* <img src={docLogo} alt="" /> */}
+                  No. of
+                  <br />
+                  reports
+                </div>
+                <div className="table-data4">
+                  {/* <img src={starLogo} alt="" /> */}
+                  Issue
+                  <br />
+                  rating
+                </div>
               </tr>
             </thead>
             <tbody className="scrolldown">
               {leaderboard.map((item, rank) => {
                 return (
                   <tr className="names">
-                    <td>{rank + 1}</td>
-                    <td title={item.username}>{item.username}</td>
-                    <td>{item.noOfSubmissions}</td>
-                    <td>{item.noOfStars}</td>
+                    <div className="table-data1">{rank + 100}</div>
+                    <div className="table-data2" title={item.username}>
+                      {item.username}
+                    </div>
+                    {/* <div className="table-data3">{item.noOfSubmissions}</div> */}
+                    {/* <div className="table-data">{item.noOfStars}</div> */}
+                    <div className="table-data3">
+                      {Array(item.noOfSubmissions).fill(
+                        <img src={docLogo} alt="" />
+                      )}
+                    </div>
+                    <div className="table-data4">
+                      {[1, 2, 3, 4, 5].map((e) => {
+                        if (Math.ceil(item.noOfStars) - e >= 1)
+                          return <img src={starLogo} alt="" />;
+                        else if (Math.ceil(item.noOfStars) - e > -1)
+                          return <img src={halfStarLogo} alt="" />;
+                        return <></>;
+                      })}
+                    </div>
                   </tr>
                 );
               })}
