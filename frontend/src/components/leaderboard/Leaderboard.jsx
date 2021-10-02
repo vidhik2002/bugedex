@@ -7,6 +7,7 @@ import docLogo from "../../assets/doc.svg";
 import starLogo from "../../assets/star.svg";
 import halfStarLogo from "../../assets/halfstar.svg";
 import Pikachu from "../../assets/pikachu-running.gif";
+import { RiExternalLinkLine } from "react-icons/ri";
 import "./leader.css";
 
 const Leaderboard = () => {
@@ -102,6 +103,14 @@ const Leaderboard = () => {
               })}
             </tbody>
           </table>
+          <a
+            className="submit-button"
+            href="https://csivit.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            SUBMIT REPORT <RiExternalLinkLine />
+          </a>
           <img src={footer} alt="" className="footer-logo" />
         </div>
       </div>
