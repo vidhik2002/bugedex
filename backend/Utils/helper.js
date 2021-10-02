@@ -2,8 +2,8 @@ const cron = require("node-cron");
 const update = require("./updater")
 
 module.exports = () => {
-  cron.schedule("*/10 * * * * *", () => {
-    // update();
+  cron.schedule("*/4 * * * *", () => {
+    update();
     console.log("running a task every minutes");
   });
 };

@@ -29,9 +29,6 @@ const update = async () => {
     // majorDimension: "COLUMNS"
   });
 
-  //send the data reae with the response
-  console.log(readData.data.values[0][0]);
-
   for (let i = 0; i < readData.data.values.length; i++) {
     User.findOneAndUpdate(
       {
