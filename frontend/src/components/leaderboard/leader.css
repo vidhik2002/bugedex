@@ -78,6 +78,7 @@
   flex-direction: column;
   overflow: hidden;
   width: 80%;
+  /* border-bottom: 2px solid var(--yellow2); */
 }
 
 .scrolldown {
@@ -183,6 +184,30 @@
 
 .table-data4 img {
   margin: 1px;
+}
+
+.submit-button {
+  padding: 10px;
+  margin-top: 15px;
+  color: black;
+  font-family: "Ligconsolata";
+  border: 2px solid var(--yellow2);
+  background-color: var(--yellow2);
+  transition: all 0.15s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.submit-button:active {
+  color: var(--yellow2);
 }
 
 .footer-logo {
