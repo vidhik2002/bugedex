@@ -3,6 +3,7 @@ const app = express();
 
 require("dotenv/config");
 require("./models/dbInit");
+// require("./helper.js")();
 
 const cors = require('cors');
 app.use(cors());
