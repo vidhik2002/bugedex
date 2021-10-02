@@ -5,7 +5,7 @@ require("dotenv/config");
 require("./models/dbInit");
 // require("./helper.js")();
 
-const cors = require('cors');
+const cors = require("cors");
 app.use(cors());
 app.set("trust proxy", true);
 app.use(express.json());
