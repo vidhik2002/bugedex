@@ -4,6 +4,6 @@ const update = require("./updater")
 module.exports = () => {
   cron.schedule("*/4 * * * *", () => {
     update();
-    console.log("running a task every minutes");
+    console.log("running a task every 4 minutes");
   });
 };
