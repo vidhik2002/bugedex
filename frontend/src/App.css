@@ -8,7 +8,7 @@ a {
 }
 
 :root {
-  --yellow2: #FBEB9A;
+  --yellow2: #0064A7;
   --guide-bg: var(--future);
   --map-bg: var(--past);
   --navbar-bg: var(--map-bg);

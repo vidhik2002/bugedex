@@ -2,7 +2,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useEffect, useState } from "react";
 import { getLeaderboard } from "../../api/requests";
 import leaderLogo from "../../assets/leaderboard.svg";
-import footer from "../../assets/Footer.svg";
+import footer from "../../assets/footer.png";
 import docLogo from "../../assets/doc.svg";
 import starLogo from "../../assets/star.svg";
 import halfStarLogo from "../../assets/halfstar.svg";
