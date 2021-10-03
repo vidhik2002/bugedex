@@ -1,4 +1,4 @@
-import { API, baseURL } from "./api";
+import { API } from "./api";
 
 export const getLeaderboard = async () => {
   let res = await API.get(`/score`);

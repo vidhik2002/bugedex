@@ -1,4 +1,4 @@
-import CircularProgress from "@mui/material/CircularProgress";
+// import CircularProgress from "@mui/material/CircularProgress";
 import { useEffect, useState } from "react";
 import { getLeaderboard } from "../../api/requests";
 import leaderLogo from "../../assets/leaderboard.svg";
@@ -78,7 +78,7 @@ const Leaderboard = () => {
               {leaderboard.map((item, rank) => {
                 return (
                   <tr className="names">
-                    <div className="table-data1">{rank + 100}</div>
+                    <div className="table-data1">{rank + 1}</div>
                     <div className="table-data2" title={item.username}>
                       {item.username}
                     </div>
@@ -88,6 +88,7 @@ const Leaderboard = () => {
                       {Array(item.noOfSubmissions).fill(
                         <img src={docLogo} alt="" />
                       )}
+                      {item.noOfSubmissions === 0 && "-"}
                     </div>
                     <div className="table-data4">
                       {[1, 2, 3, 4, 5].map((e) => {

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const API = axios.create({
     // baseURL: process.env.REACT_APP_BASE_URL,
-    baseURL: 'http://192.168.142.241:3001',
+    baseURL: 'https://bugedex-api.csivit.com',
     responseType: 'json',
 });
 
@@ -10,6 +10,6 @@ export const setAuthToken = (token) => {
     API.defaults.headers.common.Authorization = token;
 };
 
-export const baseURL = 'http://localhost:3001';
+export const baseURL = 'https://bugedex-api.csivit.com';
 
 export default API;
