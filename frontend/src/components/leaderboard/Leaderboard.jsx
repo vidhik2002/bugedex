@@ -106,7 +106,7 @@ const Leaderboard = () => {
           </table>
           <a
             className="submit-button"
-            href="https://csivit.com"
+            href="https://forms.gle/XiFzwupK4LJg5eK89"
             rel="noreferrer"
             target="_blank"
           >
